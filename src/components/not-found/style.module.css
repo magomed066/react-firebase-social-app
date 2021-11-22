@@ -1,0 +1,18 @@
+.not-found {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.not-found .link {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+}
+
+.not-found .link i {
+  margin-left: 10px;
+}

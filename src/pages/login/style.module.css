@@ -1,0 +1,29 @@
+.login {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+  border-radius: 50px;
+}
+
+.login__bg {
+  width: 100%;
+}
+
+.login-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overflow__hidden {
+  overflow: hidden;
+}
+
+.icon {
+  text-align: center;
+}
