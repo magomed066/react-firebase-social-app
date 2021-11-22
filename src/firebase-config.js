@@ -5,6 +5,7 @@ import {
 	signInWithPopup,
 	onAuthStateChanged,
 } from 'firebase/auth'
+import { getFirestore } from 'firebase/firestore'
 
 const firebaseConfig = {
 	// apiKey: process.env.API_KEY,
@@ -28,8 +29,7 @@ const app = initializeApp(firebaseConfig)
 const auth = getAuth(app)
 
 const provider = new GoogleAuthProvider()
-provider.setCustomParameters({ prompt: 'select_account' })
 
 const signInWithGoogle = () => signInWithPopup(auth, provider)
 
-export { app, auth, signInWithGoogle, onAuthStateChanged }
+export { app, auth, signInWithGoogle, onAuthStateChanged, getFirestore }
