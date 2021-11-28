@@ -1,20 +1,14 @@
 import { initializeApp } from 'firebase/app'
 import {
 	getAuth,
-	GoogleAuthProvider,
-	signInWithPopup,
+	createUserWithEmailAndPassword,
 	onAuthStateChanged,
 } from 'firebase/auth'
 import { getFirestore } from 'firebase/firestore'
 
+import { collection, onSnapshot } from 'firebase/firestore'
+
 const firebaseConfig = {
-	// apiKey: process.env.API_KEY,
-	// authDomain: process.env.AUTH_DOMAIN,
-	// projectId: process.env.PROJECT_ID,
-	// storageBucket: process.env.STORAGE_BUCKET,
-	// messagingSenderId: process.env.MESSAGING_SENDER_ID,
-	// appId: process.env.APP_ID,
-	// measurementId: process.env.MEASUREMENT_ID,
 	apiKey: 'AIzaSyC69FD8l0BoxW4mUNhElVGP-znO4ZyO31w',
 	authDomain: 'social-media-app-962a3.firebaseapp.com',
 	projectId: 'social-media-app-962a3',
@@ -28,8 +22,13 @@ const app = initializeApp(firebaseConfig)
 
 const auth = getAuth(app)
 
-const provider = new GoogleAuthProvider()
+const db = getFirestore()
 
-const signInWithGoogle = () => signInWithPopup(auth, provider)
-
-export { app, auth, signInWithGoogle, onAuthStateChanged, getFirestore }
+export {
+	auth,
+	db,
+	collection,
+	onSnapshot,
+	createUserWithEmailAndPassword,
+	onAuthStateChanged,
+}

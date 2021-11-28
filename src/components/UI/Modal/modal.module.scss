@@ -1,0 +1,120 @@
+.modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  animation: fade 1s;
+
+  &__overflow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.555);
+  }
+
+  &-dialog {
+    position: relative;
+    max-width: 50rem;
+    width: 100%;
+    background: #fff;
+    z-index: 999;
+    border-radius: .5rem;
+    padding: 2rem;
+    padding-top: 4rem;
+
+    &__logo {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
+  &-form {
+
+    padding-top: 2rem;
+
+    &__group {
+      display: flex;
+      flex-direction: column;
+
+      &:not(:last-child) {
+        margin-bottom: 2rem;
+      }
+    }
+
+    &__label {
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+      color: rgb(34, 34, 34);
+    }
+
+    &__input {
+      border: none;
+      outline: none;
+
+      border: 1px solid #cecece;
+      padding: 1rem;
+      border-radius: .5rem;
+    }
+
+    &__btn {
+      border: none;
+      outline: none;
+      width: 100%;
+      margin-top: 1rem;
+
+      background: rgb(228, 228, 228);
+      color: rgb(34, 34, 34);
+      padding: 1rem 2rem;
+      font-size: 1.6rem;
+      border: 1px solid #cecece;
+      cursor: pointer;
+      border-radius: .5rem;
+      transition: all .2s;
+
+      &:hover {
+        background: rgb(34, 34, 34);
+        color: #fff;
+        border-color: rgb(34, 34, 34);
+
+      }
+
+
+    }
+  }
+
+  &__close {
+    border: none;
+    outline: none;
+    position: absolute;
+    top: 3rem;
+    right: 3rem;
+    width: 1rem;
+    background: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: none;
+    font-size: 2.5rem;
+    color: rgb(34, 34, 34);
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

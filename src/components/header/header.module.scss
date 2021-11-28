@@ -1,0 +1,53 @@
+.header {
+  padding: 2rem;
+  border-bottom: 1px solid lightgray;
+  display: flex;
+  align-items: center;
+
+  &-container {
+    max-width: 100rem;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__img {
+    object-fit: contain;
+    background: #fff;
+  }
+
+  &__btn {
+    border: none;
+    outline: none;
+    background: rgb(34, 34, 34);
+    padding: .8rem 2rem;
+    color: #fff;
+    border-radius: .5rem;
+    cursor: pointer;
+
+    &:hover {
+      transform: rotate();
+      animation: shake .2s;
+    }
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(0);
+  }
+
+  40% {
+    transform: rotate(10deg);
+  }
+
+  80% {
+    transform: rotate(-10deg);
+  }
+
+  100% {
+    transform: rotate(0);
+  }
+}
